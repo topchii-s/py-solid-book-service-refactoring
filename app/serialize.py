@@ -30,4 +30,3 @@ class XmlSerialize(SerializeMixin):
         content = ElementTree.SubElement(root, "content")
         content.text = book.content
         return ElementTree.tostring(root, encoding="unicode")
-
