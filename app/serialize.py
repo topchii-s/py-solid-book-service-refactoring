@@ -1,7 +1,9 @@
 from __future__ import annotations
 
 import json
+
 import xml.etree.ElementTree as ElementTree
+
 from abc import ABC, abstractmethod
 
 from app.book import Book
@@ -28,3 +30,4 @@ class XmlSerialize(SerializeMixin):
         content = ElementTree.SubElement(root, "content")
         content.text = book.content
         return ElementTree.tostring(root, encoding="unicode")
+
